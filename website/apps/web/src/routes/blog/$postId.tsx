@@ -412,6 +412,25 @@ function BlogPostComponent() {
             {post.content}
           </ReactMarkdown>
         </div>
+
+        {/* Author Section */}
+        <div className="mt-12 pt-8 border-t border-muted">
+          <div className="flex items-start gap-4">
+            <div className="flex-shrink-0">
+              <img
+                src="https://github.com/mgale694.png"
+                alt="Matthew Gale"
+                className="w-16 h-16 rounded-full"
+              />
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-2">Matthew Gale</h3>
+              <p className="text-muted-foreground mb-3">
+                Quantitative Developer - Python, Azure, TypeScript, React
+              </p>
+            </div>
+          </div>
+        </div>
       </article>
 
       {/* Table of Contents - Desktop sidebar */}
