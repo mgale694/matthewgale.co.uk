@@ -64,7 +64,7 @@ function BlogPostCard({ post }: { post: BlogPost }) {
     >
       <Card className="h-full hover:shadow-lg transition-shadow cursor-pointer">
         {(bannerLight || bannerDark) && (
-          <div className="w-full aspect-[8/3] overflow-hidden rounded-t-lg bg-muted">
+          <div className="w-full aspect-[8/3] overflow-hidden bg-muted">
             {bannerLight && (
               <img
                 src={bannerLight}
