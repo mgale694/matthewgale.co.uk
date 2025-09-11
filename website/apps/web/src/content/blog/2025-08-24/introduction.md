@@ -27,6 +27,8 @@ I have gained specialtise in python
 
 # Motivations for Writing
 
+Firstly, I'm starting this blog as I hope some of my knowledge could be useful to other people. I feel people shouldn't have to reinvent the wheel and so maybe if me writing a blog about something I've pained over for hours and days, might prevent someone else from doing the same. The other reason is more topical to the industry as of 2025. Everything I do, professionally and personally (with and without code) at the moment is in some way impacted by AI. This is great, I love it. As someone who prides themselves on their ability to rapidly provide value to businesses and others, AI has allowed me to do this quicker and more frequently. However, sometimes I create products and process's and walk away feeling like I haven't learned anything. Now I probably have, but it just doesn't hit the same as it used to, when instead of scouring stack overflow for the solution and posting on random threads, instead I can just ask GPT. Therefore, by shutting off any LLM and allowing myself to just type, I feel I am cementing knowledge back in my brain, and ideally up-skilling myself more.
+
 - motivations
   - More selfish note, with AI writing and doing so much, feel this is a good outlet to learn
   - retanin knowledge and try to do something that actively engages me
