@@ -426,7 +426,7 @@ function BlogPostComponent() {
             <div>
               <h3 className="text-lg font-semibold mb-2">Matthew Gale</h3>
               <p className="text-muted-foreground mb-3">
-                Quantitative Developer - Python, Azure, CI/CD, Typescript, Rust, C++
+                Quantitative Developer - Python, Azure, CI/CD, Risk Modelling, Typescript - Learning Rust & C++
               </p>
             </div>
           </div>
