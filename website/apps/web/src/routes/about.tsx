@@ -28,7 +28,7 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       {
-        title: "About | Matthew Gale - Quantitative Developer/Software Developer",
+        title: "About | Matthew Gale - Quantitative Developer",
       },
       {
         name: "description",
@@ -36,7 +36,7 @@ export const Route = createFileRoute("/about")({
       },
       {
         property: "og:title",
-        content: "About | Matthew Gale - Quantitative Developer/Software Developer",
+        content: "About | Matthew Gale - Quantitative Developer",
       },
       {
         property: "og:description",
