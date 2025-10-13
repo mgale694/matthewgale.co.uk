@@ -49,7 +49,7 @@ By committing to write these blog posts without AI assistance (think of it like 
 - **Improve communication** - Practice conveying technical concepts clearly
 - **Retain learning** - The act of writing creates lasting memory
 
-## What to Expect
+# What to Expect
 
 This blog will cover the technical challenges I encounter in my day-to-day work, the solutions I develop, and the lessons learned along the way. Expect posts on Python development, Azure cloud services, financial modeling, and the occasional deep dive into problem-solving approaches.
 

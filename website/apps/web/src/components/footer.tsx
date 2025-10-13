@@ -49,7 +49,7 @@ export default function Footer() {
                 <Github className="w-5 h-5" />
               </a>
               <a
-                href="https://linkedin.com/in/mattgale"
+                href="https://linkedin.com/in/M-Gale"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors"

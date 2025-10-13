@@ -54,7 +54,7 @@ export default function Header() {
             className="hover:text-primary"
           >
             <a
-              href="https://linkedin.com/in/mattgale"
+              href="https://linkedin.com/in/M-Gale"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
