@@ -5,80 +5,20 @@ import { ExternalLink, Github } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import React from "react";
+import { projects, type Project } from "@/content/projects";
 
 export const Route = createFileRoute("/showcase")({
   component: ShowcaseComponent,
 });
 
-// Mock project data - you can replace this with your actual projects
-const projects = [
-  {
-    id: 1,
-    title: "Personal Website",
-    description: "A modern, minimalist personal website built with React, TypeScript, and TanStack Router. Features a blog system powered by markdown files.",
-    technologies: ["React", "TypeScript", "TanStack Router", "Tailwind CSS", "Vite"],
-    githubUrl: "https://github.com/mgale694/matthewgale.co.uk",
-    liveUrl: "https://matthewgale.co.uk",
-    featured: true,
-    image: "/showcase/personal-site-preview-light.webp",
-    imageDark: "/showcase/personal-site-preview-dark.webp",
-    preview: null,
-  },
-  {
-    id: 2,
-    title: "Photography Portfolio",
-    description: "A clean, elegant photography portfolio showcasing my film photography work. Built with modern web technologies and optimized for visual storytelling.",
-    technologies: ["React", "TypeScript", "TanStack Router", "Tailwind CSS", "Vite", "Responsive Design"],
-    githubUrl: "https://github.com/mgale694",
-    liveUrl: "https://mattgale-photography.pages.dev/",
-    featured: true,
-    image: "/showcase/photography-preview-light.webp",
-    imageDark: "/showcase/photography-preview-dark.webp",
-    preview: null,
-  },
-  {
-    id: 3,
-    title: "Project Management Tool",
-    description: "A full-stack project management application with real-time collaboration features, task tracking, and team communication.",
-    technologies: ["Next.js", "PostgreSQL", "Prisma", "tRPC", "Tailwind CSS"],
-    githubUrl: "#",
-    liveUrl: "#",
-    featured: false,
-    image: null,
-    preview: null,
-  },
-  {
-    id: 4,
-    title: "E-commerce Platform",
-    description: "A scalable e-commerce solution with inventory management, payment processing, and admin dashboard.",
-    technologies: ["React", "Node.js", "MongoDB", "Stripe", "Express"],
-    githubUrl: "#",
-    liveUrl: "#",
-    featured: false,
-    image: null,
-    preview: null,
-  },
-  {
-    id: 5,
-    title: "API Analytics Dashboard",
-    description: "Real-time analytics dashboard for API monitoring with custom metrics, alerts, and performance insights.",
-    technologies: ["Vue.js", "Python", "FastAPI", "Redis", "Chart.js"],
-    githubUrl: "#",
-    liveUrl: "#",
-    featured: false,
-    image: null,
-    preview: null,
-  },
-];
-
-function ProjectCard({ project }: { project: typeof projects[0] }) {
+function ProjectCard({ project }: { project: Project }) {
   return (
     <Card className="h-full overflow-hidden">
       {(project.image || project.preview === "iframe") && (
         <div className="aspect-video overflow-hidden bg-muted">
           {project.preview === "iframe" ? (
             <iframe
-              src={project.liveUrl}
+              src={project.liveUrl ?? undefined}
               title={`${project.title} preview`}
               className="w-full h-full border-0 pointer-events-none"
               loading="lazy"
@@ -139,12 +79,14 @@ function ProjectCard({ project }: { project: typeof projects[0] }) {
                 Code
               </a>
             </Button>
-            <Button size="sm" asChild>
-              <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                <ExternalLink className="w-4 h-4 mr-2" />
-                Live Demo
-              </a>
-            </Button>
+            {project.liveUrl && (
+              <Button size="sm" asChild>
+                <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                  <ExternalLink className="w-4 h-4 mr-2" />
+                  Live Demo
+                </a>
+              </Button>
+            )}
           </div>
         </div>
       </CardContent>
@@ -160,7 +102,7 @@ function ShowcaseComponent() {
   const [inputFocused, setInputFocused] = React.useState(false);
 
   // Filter projects by all selected tags
-  const filterProjects = (list: typeof projects) =>
+  const filterProjects = (list: Project[]) =>
     selectedTags.length === 0
       ? list
       : list.filter(p => selectedTags.every(tag => p.technologies.includes(tag)));

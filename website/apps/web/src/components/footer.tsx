@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand Section */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Matt Gale</h3>
+            <h3 className="text-lg font-semibold">Matthew Gale</h3>
             <p className="text-sm text-muted-foreground">
               Quantitative Developer passionate about building elegant solutions to complex problems.
             </p>
@@ -49,7 +49,7 @@ export default function Footer() {
                 <Github className="w-5 h-5" />
               </a>
               <a
-                href="https://linkedin.com/in/mattgale"
+                href="https://linkedin.com/in/M-Gale"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors"
@@ -74,7 +74,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="mt-8 pt-8 border-t flex flex-col sm:flex-row justify-between items-center space-y-2 sm:space-y-0">
           <p className="text-xs text-muted-foreground">
-            © {currentYear} Matt Gale. All rights reserved.
+            © {currentYear} Matthew Gale. All rights reserved.
           </p>
           <p className="text-xs text-muted-foreground flex items-center gap-1">
             Built with <Heart className="w-3 h-3 text-red-500" /> using React, TypeScript & Tailwind CSS
